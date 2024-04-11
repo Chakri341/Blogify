@@ -22,3 +22,4 @@ Blogify comes equipped with a wide range of features to enhance your blogging ex
 7. **Blog Management**: Authors have complete control over their blogs. They can edit or delete their blogs as needed, providing them with flexibility and ownership.
 
 # Blogify
+# Blogify
