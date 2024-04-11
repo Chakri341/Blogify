@@ -3,16 +3,20 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+const path=require('path');
 
 const userRoute = require('./routes/user');
 const blogRoute = require('./routes/blog');
 const { checkForAuthCookie } = require('./middlewares/authentication');
 const Blog = require('./models/blog');
 
+
 const app = express();
 const PORT = process.env.PORT;
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(cookieParser());
